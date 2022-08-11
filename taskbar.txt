@@ -1,2 +1,2 @@
 1: identity otomatik olarak getirmeliyiz
-2:
+2:Crud Operations Tamamla

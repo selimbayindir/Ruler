@@ -24,9 +24,20 @@ namespace Business.Concrete
 
         }
 
+        public void Delete(Person person)
+        {
+            
+            _person.Delete(person);
+        }
+
         public List<Person> GetPeople()
         {
             return _person.GetAll();
+        }
+
+        public void Update(Person person)
+        {
+            throw new NotImplementedException();
         }
     }
 }

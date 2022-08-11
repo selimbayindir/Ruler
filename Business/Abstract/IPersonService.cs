@@ -12,6 +12,8 @@ namespace Business.Abstract
         List<Person> GetPeople();
 
         void Add(Person person);
+        void Update(Person person);
+        void Delete(Person person);
 
     }
 }

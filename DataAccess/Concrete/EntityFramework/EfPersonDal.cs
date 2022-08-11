@@ -24,9 +24,16 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
+     
+
         public void Delete(Person person)
         {
-            throw new NotImplementedException();
+            using (NortwindContext context = new NortwindContext())
+            {
+                var deletedEntry = context.Entry(person);
+                deletedEntry.State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
 
         public Person Get(Expression<Func<Person, bool>> filter)
