@@ -20,6 +20,7 @@ namespace Business.Concrete
 
         public void Add(Person person)
         {
+            
              _person.Add(person);
 
         }

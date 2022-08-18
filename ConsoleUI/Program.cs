@@ -23,9 +23,11 @@ Added(personManager);
 
 static void Added(PersonManager personManager)
 {
-    Person people = new Person(3, "Selim", "BAYINDIR", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
+   
+    
+        Person people = new Person(Guid.NewGuid(), "Selim", "BAYINDIR", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
+        personManager.Add(people);
 
-    personManager.Add(people);
     Console.WriteLine("Personel Kaydedilmiştir.");
 }
 
@@ -33,7 +35,7 @@ static void Added(PersonManager personManager)
 
 static void Deleted(PersonManager personManager)
 {
-    Person people = new Person(2, "Selim", "BAYINDIR", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
+    Person people = new Person(Guid.NewGuid(), "Selim", "BAYINDIR", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
 
     personManager.Delete(people);
     Console.WriteLine("Personel Silinmiştir.");

@@ -1,6 +1,7 @@
 ﻿using Entity.Abstract;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Entity.Concrete
 
         }
 
-        public Person(int ıd, string name, string lastName, int ıdentityNumber, string phoneNumber, string emailAddress, DateTime jobEntry, DateTime? jobExit, bool ıSSoldier, bool gender, string education, string addresses, bool ıSTrue)
+        public Person(Guid ıd, string name, string lastName, int ıdentityNumber, string phoneNumber, string emailAddress, DateTime jobEntry, DateTime? jobExit, bool ıSSoldier, bool gender, string education, string addresses, bool ıSTrue)
         {
             Id = ıd;
             Name = name;
@@ -30,8 +31,10 @@ namespace Entity.Concrete
             Addresses = addresses;
             ISTrue = ıSTrue;
         }
-            
-        public int Id { get; set; }
+       /// <summary>
+       /// [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       /// </summary>
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public int IdentityNumber { get; set; }

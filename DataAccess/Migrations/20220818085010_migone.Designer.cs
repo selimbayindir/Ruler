@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(NortwindContext))]
-    [Migration("20220809103343_mig1")]
-    partial class mig1
+    [Migration("20220818085010_migone")]
+    partial class migone
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,11 +83,9 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Entity.Concrete.Person", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Addresses")
                         .IsRequired()
