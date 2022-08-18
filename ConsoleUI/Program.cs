@@ -25,10 +25,10 @@ static void Added(PersonManager personManager)
 {
    
     
-        Person people = new Person(Guid.NewGuid(), "Selim", "BAYINDIR", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
+        Person people = new Person(Guid.NewGuid(), "Yavuz", "KAYA", 11111111, "556565656", "byndr28@gmail.com", DateTime.Now, DateTime.Now, true, true, "Önlisans", "Sancaktepe", true);
         personManager.Add(people);
 
-    Console.WriteLine("Personel Kaydedilmiştir.");
+    Console.WriteLine("Personel Kaydedilmiştir."+people.Id+" "+people.Name);
 }
 
 ///Deleted(personManager);
